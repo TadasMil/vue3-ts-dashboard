@@ -2,7 +2,7 @@
   "compilerOptions": {
     "skipLibCheck": true,
     "isolatedModules": true,
-    "target": "ESNext",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
@@ -15,16 +15,17 @@
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./src/*"]
-    }
+    },
+    "types": [
+      "vitest",
+      "vitest/globals",
+      "vite/client",
+      "vite-plugin-pages/client",
+      "vite-plugin-vue-layouts/client",
+      "unplugin-icons/types/vue"
+    ],
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "types": [
-    "vitest",
-    "vitest/globals",
-    "vite/client",
-    "vite-plugin-pages/client",
-    "vite-plugin-vue-layouts/client"
-  ],
-  "typeRoots": ["./node_modules/@types", "./src/types"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules", ".github", ".history", "dist"]
 }
