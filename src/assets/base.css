@@ -1,0 +1,71 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  /* Vue Theme Colors */
+  --vt-c-white: #ffffff;
+  --vt-c-black: #181818;
+
+  /* Main Color Palette */
+  --color-primary: #ff5151;
+  --color-primary-dark: #f64848;
+  --color-primary-light: #ff6262;
+
+  /* Neutral Color Palette */
+  --color-white: #ffffff;
+  --color-white-tint: #ff9797;
+}
+
+/* semantic color variables for this project */
+:root {
+  --background-color: var(--color-white);
+  --text-color: var(--vt-c-black);
+  --heading-color: var(--color-primary);
+  --border-color: var(--color-primary-light);
+  --hover-color: var(--color-primary-dark);
+  --accent-color: var(--color-white-tint);
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif; /* You can replace this with your preferred font */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
