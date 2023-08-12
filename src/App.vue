@@ -2,12 +2,12 @@
 import { RouterView } from 'vue-router'
 
 import BaseLayout from '@/components/base/BaseLayout.vue'
-import NavigationSideMenu from '@/components/NavigationSideMenu.vue'
+import SidebarNavigation from '@/components/SidebarNavigation.vue'
 </script>
 
 <template>
   <BaseLayout>
-    <NavigationSideMenu />
+    <SidebarNavigation />
 
     <RouterView />
   </BaseLayout>

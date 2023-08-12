@@ -9,6 +9,12 @@
   --color-primary-dark: #f64848;
   --color-primary-light: #ff6262;
 
+  --color-secondary: #686868;
+  --color-secondary-dark: #575757;
+  --color-secondary-light: #dfdfdf;
+
+  --color-tertiary: #b2b2b2;
+
   /* Neutral Color Palette */
   --color-white: #ffffff;
   --color-white-tint: #ff9797;
@@ -17,9 +23,14 @@
 /* semantic color variables for this project */
 :root {
   --background-color: var(--color-white);
+  --sidebar-background-color: #fafafa;
+
   --text-color: var(--vt-c-black);
   --heading-color: var(--color-primary);
+  --subtitle-color: var(--color-secondary);
+
   --border-color: var(--color-primary-light);
+
   --hover-color: var(--color-primary-dark);
   --accent-color: var(--color-white-tint);
 }
@@ -36,25 +47,11 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Arial', sans-serif; /* You can replace this with your preferred font */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
-  color: var(--color-primary);
   text-decoration: none;
-}
-
-a:hover {
-  color: var(--hover-color);
 }
 
 button {

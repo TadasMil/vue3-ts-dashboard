@@ -1,15 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UserDashboard from '@/views/UserDashboard.vue'
+import { RouteRecordRaw } from 'vue-router'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'UserDashboard',
-      component: UserDashboard
+import { userRoutes } from './userRoutes'
+
+const routes: Readonly<RouteRecordRaw[]> = [...userRoutes]
+
+export default createRouter({
+  routes,
+  history: createWebHistory(),
+  scrollBehavior(_to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
     }
-  ]
-})
 
-export default router
+    return { top: 0, left: 0 }
+  }
+})
