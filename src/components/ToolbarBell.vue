@@ -3,25 +3,19 @@ import RoundNotifications from 'virtual:icons/ic/round-notifications'
 </script>
 
 <template>
-  <div class="bell-container">
-    <RoundNotifications class="notification-icon" />
-    <div class="notification-dot"></div>
+  <div class="toolbar-bell-container">
+    <RoundNotifications class="toolbar-notification-icon" />
+    <div class="toolbar-notification-dot"></div>
   </div>
 </template>
 
 <style scoped>
-.bell-container {
+.toolbar-bell-container {
   position: relative;
   display: inline-block;
 }
 
-.notification-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--color-tertiary);
-}
-
-.notification-dot {
+.toolbar-notification-dot {
   position: absolute;
   top: 0;
   right: 0;
