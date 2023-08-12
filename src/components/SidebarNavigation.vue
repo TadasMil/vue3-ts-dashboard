@@ -81,6 +81,8 @@ const otherLinks: ISidebarMenu = {
   flex-direction: column;
   align-items: center;
   gap: 39px 0;
+
+  transition: width 0.3s ease;
 }
 
 .sidebar-title {
@@ -97,6 +99,12 @@ const otherLinks: ISidebarMenu = {
 
   .sidebar-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .sidebar {
+    display: none;
   }
 }
 </style>

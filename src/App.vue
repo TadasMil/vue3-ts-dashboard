@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 
-import BaseLayout from '@/components/base/BaseLayout.vue'
-import SidebarNavigation from '@/components/SidebarNavigation.vue'
+const route = useRoute()
 </script>
 
 <template>
-  <BaseLayout>
-    <SidebarNavigation />
-
+  <component :is="route.meta.layout || 'div'">
     <RouterView />
-  </BaseLayout>
+  </component>
 </template>
-
-<style scoped></style>

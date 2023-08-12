@@ -9,40 +9,42 @@ import UserSupport from '@/views/UserSupport.vue'
 
 import pageNames from '@/constants/pageNames'
 
+import { createPrivateRoute } from '@/features/routeMeta'
+
 export const userRoutes: Readonly<RouteRecordRaw[]> = [
-  {
+  createPrivateRoute({
     path: '/',
     name: pageNames.UserDashboard,
     component: UserDashboard
-  },
-  {
+  }),
+  createPrivateRoute({
     path: '/recruitment',
     name: pageNames.UserRecruitment,
     component: UserRecruitment
-  },
-  {
+  }),
+  createPrivateRoute({
     path: '/schedule',
     name: pageNames.UserSchedule,
     component: UserSchedule
-  },
-  {
+  }),
+  createPrivateRoute({
     path: '/settings',
     name: pageNames.UserSettings,
     component: UserSettings
-  },
-  {
+  }),
+  createPrivateRoute({
     path: '/support',
     name: pageNames.UserSupport,
     component: UserSupport
-  },
-  {
+  }),
+  createPrivateRoute({
     path: '/employee',
     name: pageNames.UserEmployee,
     component: UserEmployee
-  },
-  {
+  }),
+  createPrivateRoute({
     path: '/department',
     name: pageNames.UserDepartment,
     component: UserDepartment
-  }
+  })
 ]
