@@ -11,7 +11,7 @@ const { links, title } = defineProps<{
 
 <template>
   <div class="sidebar-links">
-    <p class="nav-title">{{ title }}</p>
+    <p class="sidebar-links-title">{{ title }}</p>
 
     <router-link
       v-for="link in links"
@@ -31,7 +31,7 @@ const { links, title } = defineProps<{
   width: 100%;
 }
 
-.nav-title {
+.sidebar-links-title {
   color: var(--color-secondary);
   text-transform: uppercase;
   margin-left: 30px;
@@ -71,5 +71,25 @@ const { links, title } = defineProps<{
 .active-text,
 .sidebar-link:hover .sidebar-link-text {
   color: var(--color-primary);
+}
+
+@media (max-width: 834px) {
+  .sidebar-link-text {
+    display: none; /* Hide the title and link text */
+  }
+
+  .sidebar-links-title {
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+  }
+
+  .sidebar-link-icon {
+    margin-left: 0;
+  }
 }
 </style>

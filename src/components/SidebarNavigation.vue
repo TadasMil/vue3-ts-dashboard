@@ -87,4 +87,16 @@ const otherLinks: ISidebarMenu = {
   font-size: 36px;
   font-weight: 600;
 }
+
+@media (max-width: 834px) {
+  .sidebar {
+    width: 90px;
+    padding: 40px 0;
+    gap: 25px 0;
+  }
+
+  .sidebar-title {
+    font-size: 20px;
+  }
+}
 </style>
