@@ -27,7 +27,7 @@
 /* semantic color variables for this project */
 :root {
   --background-color: var(--color-white);
-  --sidebar-background-color: #fafafa;
+  --sidebar-background-color: var(--color-off-white);
 
   --text-color: var(--vt-c-black);
   --heading-color: var(--color-primary);
