@@ -1,5 +1,7 @@
 <script setup lang="ts" name="Toolbar">
+import BaseIcon from '@/components/base/BaseIcon.vue'
 import ToolbarBell from '@/components/ToolbarBell.vue'
+import ToolbarProfileMenu from '@/components/ToolbarProfileMenu.vue'
 import ToolbarSearch from '@/components/ToolbarSearch.vue'
 
 import LeftDotsMessage from '~icons/custom/chat-left'
@@ -11,7 +13,8 @@ import LeftDotsMessage from '~icons/custom/chat-left'
 
     <div class="toolbar-actions">
       <ToolbarBell />
-      <LeftDotsMessage class="toolbar-notification-icon" />
+      <BaseIcon :icon="LeftDotsMessage" :size="28" />
+      <ToolbarProfileMenu />
     </div>
   </div>
 </template>
@@ -29,12 +32,7 @@ import LeftDotsMessage from '~icons/custom/chat-left'
 
 .toolbar-actions {
   display: flex;
+  align-items: center;
   gap: 0 30px;
-}
-
-.toolbar-notification-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--color-tertiary);
 }
 </style>

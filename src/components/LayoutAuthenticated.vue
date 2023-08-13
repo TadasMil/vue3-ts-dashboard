@@ -20,7 +20,6 @@ import Toolbar from '@/components/Toolbar.vue'
   height: 100vh;
   gap: 20px 50px;
 
-  /* Grid areas */
   grid-template-areas:
     'sidebar toolbar'
     'sidebar content';
