@@ -46,4 +46,10 @@ exports[`BaseButton.vue > should render icon button 1`] = `
 </button>"
 `;
 
+exports[`BaseButton.vue > should render icon button with fixed size given size property is provided 1`] = `
+"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-icon btn-inverted btn\\" style=\\"width: 24px; height: 24px;\\">
+  <div data-v-33235260=\\"\\" style=\\"width: 24px; height: 24px;\\"></div>
+</button>"
+`;
+
 exports[`BaseButton.vue > should render router-link component 1`] = `"<router-link data-v-33235260=\\"\\" to=\\"[object Object]\\" type=\\"submit\\" disabled=\\"false\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></router-link>"`;

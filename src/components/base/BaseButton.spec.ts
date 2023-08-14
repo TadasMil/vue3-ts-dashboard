@@ -92,6 +92,17 @@ describe('BaseButton.vue', () => {
     expect(html()).toMatchSnapshot()
   })
 
+  it('should render icon button with fixed size given size property is provided', () => {
+    const { html } = render(BaseButton, {
+      props: {
+        icon: () => h('div'),
+        size: 24
+      }
+    })
+
+    expect(html()).toMatchSnapshot()
+  })
+
   it('should emit click event', async () => {
     const { getByRole, emitted } = render(BaseButton)
 

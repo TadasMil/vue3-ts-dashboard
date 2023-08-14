@@ -12,12 +12,14 @@ const {
   icon,
   density = 'default',
   disabled,
+  size,
   variant = 'default',
   href,
   to,
   rounded = 'sm'
 } = defineProps<{
   icon?: IconType
+  size?: number
   disabled?: boolean
   color?: ButtonColor
   density?: ButtonDensity
@@ -45,6 +47,11 @@ const classes = computed(() => [
   { 'btn-inverted': icon },
   { 'btn-disabled': disabled }
 ])
+
+const styles = computed(() => ({
+  width: `${size}px`,
+  height: `${size}px`
+}))
 </script>
 
 <template>
@@ -56,9 +63,10 @@ const classes = computed(() => [
     type="submit"
     :disabled="disabled"
     :class="[...classes, 'btn']"
+    :style="styles"
     @click="emit('click')"
   >
-    <BaseIcon v-if="icon" :icon="icon" />
+    <BaseIcon v-if="icon" :icon="icon" :size="size" />
     <slot v-else />
   </component>
 </template>
@@ -79,7 +87,7 @@ const classes = computed(() => [
   --inverted-btn-foreground-hover: var(--color-primary-dark);
 }
 
-.btn-secondary {
+.btn-tertiary {
   --btn-background: var(--color-tertiary);
   --btn-foreground: var(--color-white);
   --btn-background-hover: rgba(178, 178, 178, 0.2);
@@ -148,7 +156,6 @@ TODO: Define styles for the remaining button colors from the color palette
 
 .btn.btn-inverted {
   border: none;
-  display: inline-flex;
   background-color: transparent;
   color: var(--inverted-btn-foreground);
 }
