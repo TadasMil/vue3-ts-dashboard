@@ -10,7 +10,6 @@ const {
 } = defineProps<{
   icon: IconType
   size?: number
-  color?: 'tertiary'
 }>()
 
 const iconStyle = computed(() => {
@@ -19,26 +18,8 @@ const iconStyle = computed(() => {
     height: `${size}px`
   }
 })
-
-const colorClassMapping = {
-  tertiary: 'icon-tertiary'
-}
-
-const classes = computed(() => {
-  return colorClassMapping[color] || ''
-})
 </script>
 
 <template>
-  <component :is="icon" :style="iconStyle" :class="classes" />
+  <component :is="icon" :style="iconStyle" />
 </template>
-
-<style scoped>
-.icon-tertiary {
-  color: var(--color-tertiary);
-}
-
-.icon-tertiary:hover {
-  color: var(--color-secondary-dark);
-}
-</style>
