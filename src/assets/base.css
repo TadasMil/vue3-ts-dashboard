@@ -29,7 +29,10 @@
 /* semantic color variables for this project */
 :root {
   --background-color: var(--color-white);
+
   --sidebar-background-color: var(--color-off-white);
+  --sidebar-desktop-size: 250px;
+  --sidebar-mobile-size: 90px;
 
   --text-color: var(--vt-c-black);
   --heading-color: var(--color-primary);
