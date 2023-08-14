@@ -91,16 +91,23 @@ const otherLinks: ISidebarMenu = {
 
 <style scoped>
 .sidebar {
+  position: fixed;
   background-color: var(--sidebar-background-color);
   border-right: 1px solid var(--color-secondary-light);
   padding: 30px 0;
   width: 250px;
   display: flex;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
   flex-direction: column;
   align-items: center;
   gap: 39px 0;
 
-  transition: width 0.3s ease;
+  transition:
+    width 0.5s ease,
+    transform 0.5s ease;
 }
 
 .sidebar-title {
@@ -121,33 +128,22 @@ const otherLinks: ISidebarMenu = {
     gap: 25px 0;
   }
 
-  .sidebar-title {
-    font-size: 20px;
+  .sidebar.sidebar-visible {
+    transform: translateX(0);
+    width: 250px;
   }
 
-  .sidebar.sidebar-visible {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    z-index: 12;
+  .sidebar-title {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 390px) {
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 250px;
     transform: translateX(-250px);
-    transition: transform 0.3s ease;
-    z-index: 12;
   }
 
   .sidebar.sidebar-visible {
-    display: flex;
     transform: translateX(0);
   }
 }
