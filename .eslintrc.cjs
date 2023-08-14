@@ -61,8 +61,6 @@ module.exports = {
     'react/display-name': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
-    // TODO: https://github.com/vuejs/eslint-plugin-vue/issues/2096
-    'vue/no-dupe-keys': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/component-tags-order': [
       'error',

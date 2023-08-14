@@ -64,7 +64,7 @@ const { links, title, sidebarVisible } = defineProps<{
 
 .sidebar-link-icon {
   margin-left: 30px;
-  color: var(--color-tertiary);
+  color: var(--color-highlight);
 }
 
 .sidebar-link-text {

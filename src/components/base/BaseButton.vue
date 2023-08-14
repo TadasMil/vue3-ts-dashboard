@@ -87,19 +87,19 @@ const styles = computed(() => ({
   --inverted-btn-foreground-hover: var(--color-primary-dark);
 }
 
-.btn-tertiary {
-  --btn-background: var(--color-tertiary);
+.btn-highlight {
+  --btn-background: var(--color-highlight);
   --btn-foreground: var(--color-white);
   --btn-background-hover: rgba(178, 178, 178, 0.2);
-  --btn-background-active: 2px solid var(--color-tertiary-light);
+  --btn-background-active: 2px solid var(--color-highlight-light);
 
   --btn-outlined-border: #989898;
   --btn-outlined-background: var(--color-white);
   --btn-outlined-background-hover: rgba(178, 178, 178, 0.2);
-  --btn-outlined-active-border: var(--color-tertiary);
+  --btn-outlined-active-border: var(--color-highlight);
 
-  --inverted-btn-foreground: var(--color-tertiary);
-  --inverted-btn-foreground-hover: var(--color-tertiary-dark);
+  --inverted-btn-foreground: var(--color-highlight);
+  --inverted-btn-foreground-hover: var(--color-highlight-dark);
 }
 
 /* 

@@ -1,7 +1,8 @@
 export const ButtonColors = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
-  TERTIARY: 'tertiary'
+  TERTIARY: 'tertiary',
+  HIGHLIGHT: 'highlight'
 } as const
 
 export const ButtonDensities = {

@@ -39,7 +39,7 @@ import ArrowDown from 'virtual:icons/mdi/chevron-down'
 
 .toolbar-arrow {
   font-size: 24px;
-  color: var(--color-tertiary);
+  color: var(--color-highlight);
 }
 
 @media (max-width: 834px) {

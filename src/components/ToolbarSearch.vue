@@ -7,7 +7,7 @@ import Search from '~icons/custom/search'
 <template>
   <div class="toolbar-search-container">
     <input class="search-input" placeholder="Search" />
-    <BaseButton class="search-icon" density="none" color="tertiary" :icon="Search" :size="24" />
+    <BaseButton class="search-icon" density="none" color="highlight" :icon="Search" :size="24" />
   </div>
 </template>
 

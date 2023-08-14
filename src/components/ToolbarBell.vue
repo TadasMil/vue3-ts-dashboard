@@ -6,7 +6,7 @@ import BaseButton from '@/components/base/BaseButton.vue'
 
 <template>
   <div class="toolbar-bell-container">
-    <BaseButton :icon="RoundNotifications" :size="24" density="none" color="tertiary" />
+    <BaseButton :icon="RoundNotifications" :size="24" density="none" color="highlight" />
 
     <div class="toolbar-notification-dot"></div>
   </div>

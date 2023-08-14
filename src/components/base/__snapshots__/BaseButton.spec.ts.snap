@@ -2,6 +2,10 @@
 
 exports[`BaseButton.vue > should render anchor component 1`] = `"<a data-v-33235260=\\"\\" href=\\"#\\" type=\\"submit\\" disabled=\\"false\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></a>"`;
 
+exports[`BaseButton.vue > should render button with appropriate color of highlight 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-highlight btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+
+exports[`BaseButton.vue > should render button with appropriate color of highlight and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-highlight btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;
+
 exports[`BaseButton.vue > should render button with appropriate color of primary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
 
 exports[`BaseButton.vue > should render button with appropriate color of primary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;

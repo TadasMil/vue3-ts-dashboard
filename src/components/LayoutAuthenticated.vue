@@ -26,7 +26,6 @@ const setSidebarVisible = () => {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   height: 100vh;
-  gap: 20px 50px;
   margin-left: calc(50px + var(--sidebar-desktop-size));
 }
 

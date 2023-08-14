@@ -1,6 +1,6 @@
 import LayoutAuthenticated from '@/components/LayoutAuthenticated.vue'
 
-import type { IPrivateRouteParams } from '@/types/routes'
+import { IPrivateRouteParams } from '@/types/routes'
 
 export const createPrivateRoute = ({
   name,

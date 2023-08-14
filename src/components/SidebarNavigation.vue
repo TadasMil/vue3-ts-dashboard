@@ -74,7 +74,7 @@ const otherLinks: ISidebarMenu = {
   <nav class="sidebar" :class="{ 'sidebar-visible': sidebarVisible }">
     <div v-if="sidebarVisible" class="close-btn-wrapper">
       <BaseButton
-        color="tertiary"
+        color="highlight"
         density="none"
         :icon="BaselineClose"
         :size="24"

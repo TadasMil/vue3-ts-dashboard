@@ -13,9 +13,13 @@
   --color-secondary-dark: #575757;
   --color-secondary-light: #dfdfdf;
 
-  --color-tertiary: #b2b2b2;
-  --color-tertiary-dark: #999999;
-  --color-tertiary-light: #cccccc;
+  --color-highlight: #b2b2b2;
+  --color-highlight-dark: #999999;
+  --color-highlight-light: #cccccc;
+
+  --color-tertiary: #161e54;
+  --color-tertiary-dark: #0f163f;
+  --color-tertiary-light: #2a3a7a;
 
   --color-quaternary: #b3b3b3;
   --color-off-white: #fafafa;

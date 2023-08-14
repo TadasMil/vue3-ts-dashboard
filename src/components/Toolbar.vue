@@ -17,7 +17,7 @@ const emit = defineEmits<{ setSidebarVisible: [] }>()
       <BaseButton
         class="toolbar-hamburger-menu"
         density="none"
-        color="tertiary"
+        color="highlight"
         :icon="HamburgerMenu"
         :size="24"
         @click="emit('setSidebarVisible')"
@@ -27,7 +27,7 @@ const emit = defineEmits<{ setSidebarVisible: [] }>()
 
     <div class="toolbar-actions">
       <ToolbarBell />
-      <BaseButton :icon="LeftDotsMessage" :size="24" density="none" color="tertiary" />
+      <BaseButton :icon="LeftDotsMessage" :size="24" density="none" color="highlight" />
       <ToolbarProfileMenu />
     </div>
   </div>
