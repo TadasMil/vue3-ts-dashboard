@@ -3,11 +3,7 @@ import { computed } from 'vue'
 
 import { IconType } from '@/types/icons'
 
-const {
-  icon,
-  size = 24,
-  color = 'tertiary'
-} = defineProps<{
+const { icon, size = 24 } = defineProps<{
   icon: IconType
   size?: number
 }>()

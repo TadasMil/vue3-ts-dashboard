@@ -1,12 +1,12 @@
 <script setup lang="ts" name="ToolbarBell">
 import RoundNotifications from 'virtual:icons/ic/round-notifications'
 
-import BaseIcon from '@/components/base/BaseIcon.vue'
+import BaseButton from '@/components/base/BaseButton.vue'
 </script>
 
 <template>
   <div class="toolbar-bell-container">
-    <BaseIcon :icon="RoundNotifications" :size="28" />
+    <BaseButton :icon="RoundNotifications" :size="24" density="none" color="tertiary" />
 
     <div class="toolbar-notification-dot"></div>
   </div>

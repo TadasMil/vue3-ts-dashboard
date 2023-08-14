@@ -1,33 +1,37 @@
 <script setup lang="ts" name="ToolbarSearch">
+import BaseButton from '@/components/base/BaseButton.vue'
+
 import Search from '~icons/custom/search'
 </script>
 
 <template>
-  <div class="search-container">
+  <div class="toolbar-search-container">
     <input class="search-input" placeholder="Search" />
-    <Search class="search-icon" />
+    <BaseButton class="search-icon" density="none" color="tertiary" :icon="Search" :size="24" />
   </div>
 </template>
 
 <style scoped>
-.search-container {
+.toolbar-search-container {
   display: flex;
-  width: 343px;
+  width: 30%;
+  max-width: 343px;
   padding: 10px 16px;
+  flex-grow: 1;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: space-between;
   border-radius: 4px;
+  height: 44px;
   border: 1px solid var(--color-light-gray);
   background: var(--color-off-white);
 }
 
 .search-input {
-  flex-grow: 1;
   border: none;
   background: transparent;
   outline: none;
   padding-right: 10px;
-  height: 24px;
+  width: 50%;
 }
 
 .search-input::placeholder {
@@ -53,6 +57,28 @@ import Search from '~icons/custom/search'
 
 .search-icon {
   color: #b2b2b2;
-  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 834px) {
+  .toolbar-search-container {
+    max-width: 245px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 450px) {
+  .toolbar-search-container {
+    justify-content: center;
+    padding: 0px;
+    border: none;
+    flex-grow: 0;
+    background: transparent;
+  }
+
+  .search-input {
+    display: none;
+  }
 }
 </style>

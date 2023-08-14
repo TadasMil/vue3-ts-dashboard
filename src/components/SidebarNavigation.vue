@@ -1,18 +1,26 @@
 <script setup lang="ts" name="SidebarNavigation">
+import BaselineClose from 'virtual:icons/ic/baseline-close'
 import RoundSettings from 'virtual:icons/ic/round-settings'
 import SharpDashboard from 'virtual:icons/ic/sharp-dashboard'
 
 import pageNames from '@/constants/pageNames'
 
+import BaseButton from '@/components/base/BaseButton.vue'
 import SidebarNavigationLinks from '@/components/SidebarNavigationLinks.vue'
 
-import type { ISidebarMenu } from '@/types/sideMenu'
+import { ISidebarMenu } from '@/types/sideMenu'
 
 import CalendarEvent from '~icons/custom/calendar-event'
 import Department from '~icons/custom/department'
 import Employee from '~icons/custom/employee'
 import Recruitment from '~icons/custom/recruitment'
 import Support from '~icons/custom/support'
+
+const { sidebarVisible } = defineProps<{
+  sidebarVisible: boolean
+}>()
+
+const emit = defineEmits<{ setSidebarVisible: [] }>()
 
 const mainLinks: ISidebarMenu = {
   title: 'Main menu',
@@ -63,11 +71,21 @@ const otherLinks: ISidebarMenu = {
 </script>
 
 <template>
-  <nav class="sidebar">
+  <nav class="sidebar" :class="{ 'sidebar-visible': sidebarVisible }">
+    <div v-if="sidebarVisible" class="close-btn-wrapper">
+      <BaseButton
+        color="tertiary"
+        density="none"
+        :icon="BaselineClose"
+        :size="24"
+        @click="emit('setSidebarVisible')"
+      />
+    </div>
+
     <h1 class="sidebar-title">WeHR</h1>
 
-    <SidebarNavigationLinks v-bind="mainLinks" />
-    <SidebarNavigationLinks v-bind="otherLinks" />
+    <SidebarNavigationLinks v-bind="mainLinks" :sidebarVisible="sidebarVisible" />
+    <SidebarNavigationLinks v-bind="otherLinks" :sidebarVisible="sidebarVisible" />
   </nav>
 </template>
 
@@ -90,6 +108,12 @@ const otherLinks: ISidebarMenu = {
   font-weight: 600;
 }
 
+.close-btn-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 @media (max-width: 834px) {
   .sidebar {
     width: 90px;
@@ -100,11 +124,31 @@ const otherLinks: ISidebarMenu = {
   .sidebar-title {
     font-size: 20px;
   }
+
+  .sidebar.sidebar-visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 12;
+  }
 }
 
 @media (max-width: 390px) {
   .sidebar {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 12;
+  }
+
+  .sidebar.sidebar-visible {
+    display: flex;
+    transform: translateX(0);
   }
 }
 </style>

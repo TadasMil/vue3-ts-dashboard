@@ -3,14 +3,15 @@ import BaseIcon from '@/components/base/BaseIcon.vue'
 
 import { ISidebarMenuLink } from '@/types/sideMenu'
 
-const { links, title } = defineProps<{
+const { links, title, sidebarVisible } = defineProps<{
   title: string
   links: ISidebarMenuLink[]
+  sidebarVisible: boolean
 }>()
 </script>
 
 <template>
-  <div class="sidebar-links">
+  <div class="sidebar-links" :class="{ 'tablet-sidebar-hidden': !sidebarVisible }">
     <p class="sidebar-links-title">{{ title }}</p>
 
     <router-link
@@ -21,7 +22,15 @@ const { links, title } = defineProps<{
       v-slot="{ isActive }"
     >
       <BaseIcon :icon="link.icon" :class="['sidebar-link-icon', isActive ? 'active-icon' : '']" />
-      <p :class="['sidebar-link-text', isActive ? 'active-text' : '']">{{ link.label }}</p>
+      <p
+        :class="[
+          'sidebar-link-text',
+          isActive ? 'active-text' : '',
+          !sidebarVisible ? 'text-hidden' : ''
+        ]"
+      >
+        {{ link.label }}
+      </p>
     </router-link>
   </div>
 </template>
@@ -74,21 +83,21 @@ const { links, title } = defineProps<{
 }
 
 @media (max-width: 834px) {
-  .sidebar-link-text {
-    display: none; /* Hide the title and link text */
+  .tablet-sidebar-hidden .sidebar-link-text {
+    display: none;
   }
 
-  .sidebar-links-title {
+  .tablet-sidebar-hidden .sidebar-links-title {
     font-size: 10px;
     margin: 0;
     text-align: center;
   }
 
-  .sidebar-link {
+  .tablet-sidebar-hidden .sidebar-link {
     justify-content: center;
   }
 
-  .sidebar-link-icon {
+  .tablet-sidebar-hidden .sidebar-link-icon {
     margin-left: 0;
   }
 }
