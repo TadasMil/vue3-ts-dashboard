@@ -106,8 +106,8 @@ const otherLinks: ISidebarMenu = {
   gap: 39px 0;
 
   transition:
-    width 0.5s ease,
-    transform 0.5s ease;
+    width 0.3s ease,
+    transform 0.3s ease;
 }
 
 .sidebar-title {
