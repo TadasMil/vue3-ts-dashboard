@@ -64,6 +64,8 @@ const styles = computed(() => ({
     :disabled="disabled"
     :class="[...classes, 'btn']"
     :style="styles"
+    :role="tag === 'button' ? 'button' : tag === 'a' ? 'link' : undefined"
+    :aria-disabled="disabled ? 'true' : 'false'"
     @click="emit('click')"
   >
     <BaseIcon v-if="icon" :icon="icon" :size="size" />

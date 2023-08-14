@@ -1,59 +1,59 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`BaseButton.vue > should render anchor component 1`] = `"<a data-v-33235260=\\"\\" href=\\"#\\" type=\\"submit\\" disabled=\\"false\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></a>"`;
+exports[`BaseButton.vue > should render anchor component 1`] = `"<a data-v-33235260=\\"\\" href=\\"#\\" type=\\"submit\\" disabled=\\"false\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"link\\" aria-disabled=\\"false\\"></a>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of highlight 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-highlight btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of highlight 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-highlight btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of highlight and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-highlight btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of highlight and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-highlight btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of primary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of primary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of primary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of primary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of secondary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-secondary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of secondary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-secondary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of secondary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-secondary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of secondary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-secondary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of tertiary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-tertiary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of tertiary 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-tertiary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate color of tertiary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-tertiary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate color of tertiary and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-tertiary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate density of comfortable 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-comfortable btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate density of comfortable 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-comfortable btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate density of compact 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-compact btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate density of compact 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-compact btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate density of default 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate density of default 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate density of none 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-none btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate density of none 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-none btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate rounded of lg 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-lg btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate rounded of lg 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-lg btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate rounded of md 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-md btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate rounded of md 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-md btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate rounded of sm 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate rounded of sm 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate variant of default 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate variant of default 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate variant of default and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate variant of default and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate variant of outlined 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-outlined btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate variant of outlined 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-outlined btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate variant of outlined and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-outlined btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate variant of outlined and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-outlined btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate variant of text 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-text btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate variant of text 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-text btn\\" role=\\"button\\" aria-disabled=\\"false\\"></button>"`;
 
-exports[`BaseButton.vue > should render button with appropriate variant of text and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-text btn-disabled btn\\"></button>"`;
+exports[`BaseButton.vue > should render button with appropriate variant of text and disabled 1`] = `"<button data-v-33235260=\\"\\" type=\\"submit\\" disabled=\\"\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-text btn-disabled btn\\" role=\\"button\\" aria-disabled=\\"true\\"></button>"`;
 
 exports[`BaseButton.vue > should render icon button 1`] = `
-"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-icon btn-inverted btn\\">
+"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-icon btn-inverted btn\\" role=\\"button\\" aria-disabled=\\"false\\">
   <div data-v-33235260=\\"\\" style=\\"width: 24px; height: 24px;\\"></div>
 </button>"
 `;
 
 exports[`BaseButton.vue > should render icon button with fixed size given size property is provided 1`] = `
-"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-icon btn-inverted btn\\" style=\\"width: 24px; height: 24px;\\">
+"<button data-v-33235260=\\"\\" type=\\"submit\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-icon btn-inverted btn\\" style=\\"width: 24px; height: 24px;\\" role=\\"button\\" aria-disabled=\\"false\\">
   <div data-v-33235260=\\"\\" style=\\"width: 24px; height: 24px;\\"></div>
 </button>"
 `;
 
-exports[`BaseButton.vue > should render router-link component 1`] = `"<router-link data-v-33235260=\\"\\" to=\\"[object Object]\\" type=\\"submit\\" disabled=\\"false\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\"></router-link>"`;
+exports[`BaseButton.vue > should render router-link component 1`] = `"<router-link data-v-33235260=\\"\\" to=\\"[object Object]\\" type=\\"submit\\" disabled=\\"false\\" class=\\"btn-primary btn-density-default btn-rounded-sm btn-variant-default btn\\" aria-disabled=\\"false\\"></router-link>"`;
