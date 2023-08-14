@@ -31,7 +31,6 @@ const setSidebarVisible = () => {
 
 @media (max-width: 834px) {
   .base-layout {
-    gap: 20px 0;
     margin-left: calc(var(--sidebar-mobile-size));
   }
 }
