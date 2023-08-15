@@ -10,13 +10,13 @@ const { pt } = defineProps<{
 const slots = useSlots()
 
 const classes: ICardClasses = {
-  root: 'v-card v-component',
-  header: 'v-card-header',
-  body: 'v-card-body',
-  title: 'v-card-title',
-  subtitle: 'v-card-subtitle',
-  content: 'v-card-content',
-  footer: 'v-card-footer'
+  root: 'card',
+  header: 'card__header',
+  body: 'card__body',
+  title: 'card__title',
+  subtitle: 'card__subtitle',
+  content: 'card__content',
+  footer: 'card__footer'
 }
 
 const cx = (key: keyof ICardClasses) => classes[key] || ''
@@ -56,17 +56,18 @@ const ptm = (key: keyof ICardPassThroughOptions) => {
 </template>
 
 <style>
-.v-card {
+.card {
   background: #ffffff;
   color: #666666;
   border-radius: 10px;
+  border: 1px solid var(--color-light-gray);
 }
 
-.v-card-body {
+.card__body {
   padding: 20px;
 }
 
-.v-card-title {
+.card__title {
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
@@ -74,13 +75,14 @@ const ptm = (key: keyof ICardPassThroughOptions) => {
   color: var(--color-tertiary);
 }
 
-.v-card-subtitle {
+.card__subtitle {
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #a6a6a6;
 }
 
-.v-card-footer {
+.card__footer {
   padding: 16px 0 0 0;
+  color: var(--color-secondary);
 }
 </style>

@@ -1,15 +1,16 @@
 <script setup lang="ts" name="UserDashboard">
 import BasePage from '@/components/base/BasePage.vue'
+import DashboardEmploymentSummary from '@/components/DashboardEmploymentSummary.vue'
 </script>
 
 <template>
   <BasePage title="Dashboard">
-    <div class="main-content">
-      <main>
-        <div>hello</div>
+    <div class="user-dashboard">
+      <main class="user-dashboard__main">
+        <DashboardEmploymentSummary />
       </main>
 
-      <aside>
+      <aside class="user-dashboard__aside">
         <div>aside</div>
       </aside>
     </div>
@@ -17,8 +18,14 @@ import BasePage from '@/components/base/BasePage.vue'
 </template>
 
 <style scoped>
-.main-content {
+.user-dashboard {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
+}
+
+.user-dashboard__main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 </style>
