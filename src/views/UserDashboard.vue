@@ -1,5 +1,10 @@
 <script setup lang="ts" name="UserDashboard">
+import { useQuery } from '@/composables/useQuery'
+
+import { SmartphoneService } from '@/services/ProductService'
+
 import BasePage from '@/components/base/BasePage.vue'
+import DashboardEmployeeSummary from '@/components/DashboardEmployeeSummary.vue'
 import DashboardEmploymentSummary from '@/components/DashboardEmploymentSummary.vue'
 </script>
 
@@ -8,6 +13,7 @@ import DashboardEmploymentSummary from '@/components/DashboardEmploymentSummary.
     <div class="user-dashboard">
       <main class="user-dashboard__main">
         <DashboardEmploymentSummary />
+        <DashboardEmployeeSummary />
       </main>
 
       <aside class="user-dashboard__aside">
