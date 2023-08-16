@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BaseSelectDropdown.vue > renders the default "Sort by" option 1`] = `
+"<div data-v-7c7446ef=\\"\\" class=\\"base-dropdown\\"><select data-v-7c7446ef=\\"\\" class=\\"base-dropdown__select\\" data-testid=\\"select-dropdown\\">
+    <option data-v-7c7446ef=\\"\\" disabled=\\"\\" hidden=\\"\\">Sort by</option>
+    <option data-v-7c7446ef=\\"\\" data-testid=\\"select-dropdown-option\\" value=\\"Option 1\\"></option>
+    <option data-v-7c7446ef=\\"\\" data-testid=\\"select-dropdown-option\\" value=\\"Option 2\\"></option>
+  </select><svg data-v-7c7446ef=\\"\\" viewBox=\\"0 0 24 24\\" width=\\"1.2em\\" height=\\"1.2em\\" class=\\"base-dropdown__arrow\\">
+    <path fill=\\"currentColor\\" d=\\"M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42Z\\"></path>
+  </svg></div>"
+`;

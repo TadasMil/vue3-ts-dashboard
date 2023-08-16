@@ -17,7 +17,8 @@ module.exports = {
     es6: true
   },
   globals: {
-    fetch: false
+    fetch: false,
+    defineModel: 'readonly'
   },
   plugins: ['simple-import-sort'],
   overrides: [

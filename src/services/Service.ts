@@ -27,8 +27,8 @@ export class Service<T> {
     return baseUrl
   }
 
-  protected async getAll(): Promise<T[]> {
-    return fetchUtility<T[]>(this.getUrlWithQuery(this.endpoint))
+  protected async getAll(): Promise<T> {
+    return fetchUtility<T>(this.getUrlWithQuery(this.endpoint))
   }
 
   protected async getOne(id: string): Promise<T> {

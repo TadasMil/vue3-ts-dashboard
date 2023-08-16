@@ -12,7 +12,7 @@ export class SmartphoneService<T> extends ProductService<T> {
     this.endpoint = `${this.endpoint}/smartphones`
   }
 
-  async getAll(): Promise<T[]> {
+  async getAll(): Promise<T> {
     return super.getAll()
   }
 
