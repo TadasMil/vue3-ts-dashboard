@@ -66,6 +66,12 @@ const ptm = (key: keyof ICardPassThroughOptions) => {
   padding: 20px;
 }
 
+.card__header {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
 .card__title {
   font-size: 18px;
   font-weight: 500;

@@ -28,6 +28,10 @@
   /* Neutral Color Palette */
   --color-white: #ffffff;
   --color-white-tint: #ff9797;
+
+  /* Font Family */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
 }
 
 /* semantic color variables for this project */
@@ -60,7 +64,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-primary);
 }
 
 a {

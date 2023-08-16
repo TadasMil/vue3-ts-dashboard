@@ -2,6 +2,7 @@
 import BasePage from '@/components/base/BasePage.vue'
 import DashboardEmployeeSummary from '@/components/DashboardEmployeeSummary.vue'
 import DashboardEmploymentSummary from '@/components/DashboardEmploymentSummary.vue'
+import DashboardRecentActivity from '@/components/DashboardRecentActivity.vue'
 import DashboardSmartphones from '@/components/DashboardSmartphones.vue'
 </script>
 
@@ -15,7 +16,7 @@ import DashboardSmartphones from '@/components/DashboardSmartphones.vue'
       </main>
 
       <aside class="user-dashboard__aside">
-        <div>aside</div>
+        <DashboardRecentActivity />
       </aside>
     </div>
   </BasePage>
@@ -25,6 +26,8 @@ import DashboardSmartphones from '@/components/DashboardSmartphones.vue'
 .user-dashboard {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  gap: 0 30px;
+  margin-right: 50px;
 }
 
 .user-dashboard__main {
