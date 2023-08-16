@@ -1,3 +1,3 @@
-import { QUERY_STATES } from '@/constants/query'
+import { STATES } from '@/constants/state'
 
-export type IQueryState = (typeof QUERY_STATES)[keyof typeof QUERY_STATES]
+export type IQueryState = (typeof STATES)[keyof typeof STATES]

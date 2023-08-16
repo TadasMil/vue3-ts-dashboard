@@ -1,6 +1,6 @@
-export const QUERY_STATES = {
-  IDLE: 'IDLE',
+export const STATES = {
   LOADING: 'LOADING',
+  IDLE: 'IDLE',
   ERROR: 'ERROR',
   NOT_FOUND: 'NOT_FOUND',
   NO_RESULTS: 'NO_RESULTS',

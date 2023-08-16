@@ -58,7 +58,6 @@ const ptm = (key: keyof ICardPassThroughOptions) => {
 <style>
 .card {
   background: #ffffff;
-  color: #666666;
   border-radius: 10px;
   border: 1px solid var(--color-light-gray);
 }

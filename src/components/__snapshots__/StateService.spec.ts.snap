@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StateService.vue > renders ERROR component 1`] = `
+"<div data-v-99b8d817=\\"\\" data-v-b435c541=\\"\\" class=\\"state-container\\">
+  <div data-v-b435c541=\\"\\" class=\\"error-card\\">
+    <p data-v-b435c541=\\"\\" class=\\"error-card__title\\">500</p>
+    <p data-v-b435c541=\\"\\" class=\\"error-card__subtitle\\">Internal Server Error</p>
+    <p data-v-b435c541=\\"\\" class=\\"error-card__message\\">Sorry, something went wrong.</p>
+  </div>
+</div>"
+`;
+
+exports[`StateService.vue > renders LOADING component 1`] = `
+"<div data-v-99b8d817=\\"\\" data-v-cbf0e5c2=\\"\\" class=\\"state-container\\"><svg data-v-cbf0e5c2=\\"\\" viewBox=\\"0 0 24 24\\" width=\\"1.2em\\" height=\\"1.2em\\" class=\\"loading-spinner\\">
+    <path fill=\\"currentColor\\" d=\\"M12 4V2A10 10 0 0 0 2 12h2a8 8 0 0 1 8-8Z\\"></path>
+  </svg></div>"
+`;
+
+exports[`StateService.vue > renders NO_RESULTS component 1`] = `
+"<div data-v-99b8d817=\\"\\" data-v-b435c541=\\"\\" class=\\"state-container\\">
+  <div data-v-b435c541=\\"\\" class=\\"error-card\\">
+    <!--v-if-->
+    <p data-v-b435c541=\\"\\" class=\\"error-card__subtitle\\">Sorry, no results found.</p>
+    <p data-v-b435c541=\\"\\" class=\\"error-card__message\\">Please amend the search criteria or filter field to see all items.</p>
+  </div>
+</div>"
+`;
+
+exports[`StateService.vue > renders NOT_AUTHORIZED component 1`] = `
+"<div data-v-99b8d817=\\"\\" data-v-b435c541=\\"\\" class=\\"state-container\\">
+  <div data-v-b435c541=\\"\\" class=\\"error-card\\">
+    <p data-v-b435c541=\\"\\" class=\\"error-card__title\\">403</p>
+    <p data-v-b435c541=\\"\\" class=\\"error-card__subtitle\\">You are not authorized to access this information.</p>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`StateService.vue > renders NOT_FOUND component 1`] = `
+"<div data-v-99b8d817=\\"\\" data-v-b435c541=\\"\\" class=\\"state-container\\">
+  <div data-v-b435c541=\\"\\" class=\\"error-card\\">
+    <p data-v-b435c541=\\"\\" class=\\"error-card__title\\">404</p>
+    <p data-v-b435c541=\\"\\" class=\\"error-card__subtitle\\">The following data could not be found.</p>
+    <!--v-if-->
+  </div>
+</div>"
+`;

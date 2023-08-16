@@ -1,6 +1,6 @@
 import { onMounted, Ref, ref } from 'vue'
 
-import { QUERY_STATES } from '@/constants/query'
+import { STATES } from '@/constants/state'
 
 import { IQueryState } from '@/types/query'
 
@@ -8,7 +8,7 @@ import { useState } from './useState'
 
 export const useQuery = <T>(serviceFn: () => Promise<T>) => {
   const { state, stateIs, setState } = useState<IQueryState>(
-    ...(Object.keys(QUERY_STATES) as IQueryState[])
+    ...(Object.keys(STATES) as IQueryState[])
   )
 
   const data = ref<T | null>(null) as Ref<T>
