@@ -1,5 +1,4 @@
 <script setup lang="ts" name="SortableCard">
-import { useAttrs } from 'vue'
 import Refresh from 'virtual:icons/mdi/Refresh'
 
 import BaseButton from '@/components/base/BaseButton.vue'
