@@ -1,6 +1,21 @@
-# vue-3-ts-dashboard
+# Vue 3 TypeScript WeHR Dashboard
+## Features
 
-This template should help get you started developing with Vue 3 in Vite.
+- **CSS BEM**: This project follows the BEM (Block Element Modifier) methodology for CSS class naming.
+- **Flat Project Structure**: The project structure is kept flat for simplicity and ease of navigation.
+- **Important Packages**: This project uses a variety of packages to enhance development. Some of the key packages include:
+  - 🧠 Core: `vue`, `vue-router`
+  - ⚙️ Utilities: `date-fns`
+  - 🎨 Icons: `unplugin-icons`
+
+### 🚀 Development Tools
+
+- 🚅 [Vite](https://vitejs.dev/): An extremely fast frontend build tool, leaner and faster than traditional webpack.
+- 📜 [TypeScript](https://www.typescriptlang.org/): A typed superset of JavaScript that scales.
+- 🔍 [ESLint](https://eslint.org/): A tool to find and fix problems in your JavaScript code.
+- 🎨 [Prettier](https://prettier.io/): An opinionated code formatter.
+- 🧪 [Vitest](https://vitest.dev/): A testing tool for Vite projects.
+
 
 ## Recommended IDE Setup
 
