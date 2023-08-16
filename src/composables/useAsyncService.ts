@@ -1,4 +1,5 @@
 import { onMounted, Ref, ref } from 'vue'
+import { isEmpty } from '@/utilities/utilities'
 
 import { STATES } from '@/constants/state'
 
@@ -6,7 +7,7 @@ import { IQueryState } from '@/types/query'
 
 import { useState } from './useState'
 
-export const useQuery = <T>(serviceFn: () => Promise<T>) => {
+export const useAsyncService = <T>(serviceFn: () => Promise<T>) => {
   const { state, stateIs, setState } = useState<IQueryState>(
     ...(Object.keys(STATES) as IQueryState[])
   )
@@ -19,20 +20,12 @@ export const useQuery = <T>(serviceFn: () => Promise<T>) => {
     try {
       const result = await serviceFn()
 
-      if (Array.isArray(result)) {
-        if (result.length > 0) {
-          data.value = result
-
-          setState('IDLE')
-        } else {
-          setState('NO_RESULTS')
-        }
-      } else if (result) {
+      if (isEmpty(result)) {
+        setState('NO_RESULTS')
+      } else {
         data.value = result
 
         setState('IDLE')
-      } else {
-        setState('NO_RESULTS')
       }
     } catch (err) {
       const errorMessage = (err as Error).message

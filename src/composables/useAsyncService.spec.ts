@@ -1,9 +1,9 @@
 import { render } from '@testing-library/vue'
 import { describe, expect, it, vi } from 'vitest'
 
-import { useQuery } from './useQuery.js'
+import { useAsyncService } from './useAsyncService'
 
-describe('useQuery', () => {
+describe('useAsyncService', () => {
   beforeEach(() => {
     const TestComponent = {
       template: '<div >I am Custom component</div>'
@@ -16,7 +16,7 @@ describe('useQuery', () => {
     const mockData = { key: 'value' }
     const serviceFn = vi.fn().mockResolvedValue(mockData)
 
-    const { data, state, executeQuery } = useQuery(serviceFn)
+    const { data, state, executeQuery } = useAsyncService(serviceFn)
 
     await executeQuery()
 
@@ -27,7 +27,7 @@ describe('useQuery', () => {
   it('should set state to NO_RESULTS when serviceFn resolves with empty array', async () => {
     const serviceFn = vi.fn().mockResolvedValue([])
 
-    const { state, executeQuery } = useQuery(serviceFn)
+    const { state, executeQuery } = useAsyncService(serviceFn)
 
     await executeQuery()
 
@@ -37,7 +37,7 @@ describe('useQuery', () => {
   it('should set state to ERROR when serviceFn rejects with an unknown error', async () => {
     const serviceFn = vi.fn().mockRejectedValue(new Error('Some error'))
 
-    const { state, executeQuery } = useQuery(serviceFn)
+    const { state, executeQuery } = useAsyncService(serviceFn)
 
     await executeQuery()
 
@@ -47,7 +47,7 @@ describe('useQuery', () => {
   it('should set state to NOT_AUTHORIZED when serviceFn rejects with a 403 error', async () => {
     const serviceFn = vi.fn().mockRejectedValue(new Error('403'))
 
-    const { state, executeQuery } = useQuery(serviceFn)
+    const { state, executeQuery } = useAsyncService(serviceFn)
 
     await executeQuery()
 
@@ -57,7 +57,7 @@ describe('useQuery', () => {
   it('should set state to NOT_FOUND when serviceFn rejects with a 404 error', async () => {
     const serviceFn = vi.fn().mockRejectedValue(new Error('404'))
 
-    const { state, executeQuery } = useQuery(serviceFn)
+    const { state, executeQuery } = useAsyncService(serviceFn)
 
     await executeQuery()
 

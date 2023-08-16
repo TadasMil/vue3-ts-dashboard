@@ -1,6 +1,6 @@
 <script setup lang="ts" name="DashboardSmartphones">
+import { useAsyncService } from '@/composables/useAsyncService'
 import { useProductSort } from '@/composables/useProductSort'
-import { useQuery } from '@/composables/useQuery'
 
 import { SmartphoneService } from '@/services/ProductService'
 
@@ -11,7 +11,7 @@ import StateService from '@/components/StateService.vue'
 
 import { IPhone, IProduct } from '@/types/products'
 
-const { state, data, executeQuery } = useQuery(() =>
+const { state, data, executeQuery } = useAsyncService(() =>
   new SmartphoneService<IProduct<IPhone>>().getAll()
 )
 

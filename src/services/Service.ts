@@ -1,4 +1,4 @@
-import { fetchUtility } from '@/utilities/fetchUtility'
+import { makeHttpRequest } from '@/utilities/fetchUtility'
 
 export class Service<T> {
   protected endpoint: string
@@ -28,29 +28,29 @@ export class Service<T> {
   }
 
   protected async getAll(): Promise<T> {
-    return fetchUtility<T>(this.getUrlWithQuery(this.endpoint))
+    return makeHttpRequest<T>(this.getUrlWithQuery(this.endpoint))
   }
 
   protected async getOne(id: string): Promise<T> {
-    return fetchUtility<T>(this.getUrlWithQuery(`${this.endpoint}/${id}`))
+    return makeHttpRequest<T>(this.getUrlWithQuery(`${this.endpoint}/${id}`))
   }
 
   protected async create(data: T): Promise<T> {
-    return fetchUtility<T>(this.endpoint, {
+    return makeHttpRequest<T>(this.endpoint, {
       method: 'POST',
       data
     })
   }
 
   protected async update(id: string, data: T): Promise<T> {
-    return fetchUtility<T>(`${this.endpoint}/${id}`, {
+    return makeHttpRequest<T>(`${this.endpoint}/${id}`, {
       method: 'PUT',
       data
     })
   }
 
   protected async delete(id: string): Promise<void> {
-    await fetchUtility<void>(this.getUrlWithQuery(`${this.endpoint}/${id}`), {
+    await makeHttpRequest<void>(this.getUrlWithQuery(`${this.endpoint}/${id}`), {
       method: 'DELETE'
     })
   }

@@ -3,10 +3,10 @@ type FetchOptions<RequestBody = unknown> = {
   data?: RequestBody
 }
 
-export async function fetchUtility<ResponseBody, RequestBody = unknown>(
+export const makeHttpRequest = async <ResponseBody, RequestBody = unknown>(
   url: string,
   options?: FetchOptions<RequestBody>
-): Promise<ResponseBody> {
+): Promise<ResponseBody> => {
   const headers = {
     'Content-Type': 'application/json'
   }

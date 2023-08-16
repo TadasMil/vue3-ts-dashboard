@@ -1,4 +1,5 @@
 import { RouteRecordRaw } from 'vue-router'
+import { createPrivateRoute } from '@/utilities/routeMeta'
 import UserDashboard from '@/views/UserDashboard.vue'
 import UserDepartment from '@/views/UserDepartment.vue'
 import UserEmployee from '@/views/UserEmployee.vue'
@@ -8,8 +9,6 @@ import UserSettings from '@/views/UserSettings.vue'
 import UserSupport from '@/views/UserSupport.vue'
 
 import pageNames from '@/constants/pageNames'
-
-import { createPrivateRoute } from '@/features/routeMeta'
 
 export const userRoutes: Readonly<RouteRecordRaw[]> = [
   createPrivateRoute({
