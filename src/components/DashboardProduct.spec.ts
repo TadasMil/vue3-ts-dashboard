@@ -9,8 +9,8 @@ describe('DashboardProduct.vue', () => {
       props: {
         title: 'Title',
         description: 'Description',
-        rating: 'Rating',
-        price: 'Price'
+        rating: 4.2,
+        price: 200
       }
     })
 

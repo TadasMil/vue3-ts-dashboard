@@ -105,4 +105,10 @@ const employeeSummary = [
   align-items: center;
   border-radius: 4px;
 }
+
+@media (max-width: 650px) {
+  .employee-summary {
+    flex-direction: column;
+  }
+}
 </style>

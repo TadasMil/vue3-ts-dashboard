@@ -60,10 +60,15 @@ const ptm = (key: keyof ICardPassThroughOptions) => {
   background: #ffffff;
   border-radius: 10px;
   border: 1px solid var(--color-light-gray);
+  display: flex;
+  flex-direction: column;
 }
 
 .card__body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card__header {
@@ -88,6 +93,7 @@ const ptm = (key: keyof ICardPassThroughOptions) => {
 
 .card__footer {
   padding: 16px 0 0 0;
+  margin-top: auto;
   color: var(--color-secondary);
 }
 </style>

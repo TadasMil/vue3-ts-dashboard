@@ -1,4 +1,5 @@
 <script setup lang="ts" name="SortableCard">
+import { useAttrs } from 'vue'
 import Refresh from 'virtual:icons/mdi/Refresh'
 
 import BaseButton from '@/components/base/BaseButton.vue'
@@ -7,13 +8,13 @@ import BaseSelectDropdown from '@/components/base/BaseSelectDropdown.vue'
 
 import { IOption } from '@/types/selectDropdown'
 
-const { title } = defineProps<{
+const { title, sortOptions = [] } = defineProps<{
   title: string
-  modelValue: IOption | null
-  sortOptions: IOption[]
-}>()
+  modelValue?: IOption | null
+  sortOptions?: IOption[]
 
-const emit = defineEmits<{ refresh: [] }>()
+  onRefresh?: () => void
+}>()
 
 const inputValue = defineModel<IOption | null>('modelValue', { default: null })
 </script>
@@ -32,6 +33,9 @@ const inputValue = defineModel<IOption | null>('modelValue', { default: null })
       },
       content: {
         class: 'sortable-card__content'
+      },
+      footer: {
+        class: 'sortable-card__footer'
       }
     }"
   >
@@ -47,12 +51,13 @@ const inputValue = defineModel<IOption | null>('modelValue', { default: null })
 
         <div class="sortable-card__refresh-button">
           <BaseButton
+            v-if="onRefresh"
             :icon="Refresh"
             color="highlight"
             data-testid="sortable-card-refresh"
             density="none"
             :size="20"
-            @click="emit('refresh')"
+            @click="onRefresh"
           />
         </div>
       </div>
@@ -60,6 +65,10 @@ const inputValue = defineModel<IOption | null>('modelValue', { default: null })
 
     <template #content>
       <slot />
+    </template>
+
+    <template #footer>
+      <slot name="footer" />
     </template>
   </BaseCard>
 </template>
@@ -73,6 +82,8 @@ const inputValue = defineModel<IOption | null>('modelValue', { default: null })
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: visible;
+  padding-bottom: 0px;
 }
 
 .sortable-card__actions {
@@ -87,14 +98,24 @@ const inputValue = defineModel<IOption | null>('modelValue', { default: null })
 
 .sortable-card__content {
   flex-grow: 1;
-  display: flex;
   gap: 10px 0;
-  flex-direction: column;
   overflow-y: auto;
 }
 
 .sortable-card__title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.sortable-card__footer {
+  border-top: 1px solid var(--color-light-gray);
+  margin: 0 -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  padding: 0px;
+  cursor: pointer;
 }
 </style>

@@ -17,10 +17,22 @@ const { title } = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 12px 0;
-  padding-top: 21px;
+  padding: 21px 0px;
 }
 
 .base-page-title {
   color: var(--color-tertiary);
+}
+
+@media (max-width: 834px) {
+  .base-page {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .base-page {
+    padding: 20px;
+  }
 }
 </style>

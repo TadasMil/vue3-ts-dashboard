@@ -74,4 +74,29 @@ const cards = [
   font-size: 36px;
   color: var(--color-tertiary);
 }
+
+@media (max-width: 1000px) {
+  .employment-summary {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 930px) {
+  .employment-summary {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 834px) {
+  .employment-summary {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 800px) {
+  .employment-summary {
+    flex-direction: column;
+  }
+}
 </style>

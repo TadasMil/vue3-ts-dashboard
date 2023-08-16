@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DashboardProduct.vue > should render title 1`] = `
-"<div data-v-f5ca514c=\\"\\" class=\\"product-box\\">
-  <div data-v-f5ca514c=\\"\\" class=\\"product-box__title-description\\"><span data-v-f5ca514c=\\"\\">Title</span><span data-v-f5ca514c=\\"\\">Description</span></div><span data-v-f5ca514c=\\"\\">Rating</span><span data-v-f5ca514c=\\"\\">Price$</span>
+"<div data-v-f5ca514c=\\"\\" class=\\"product-box gray-box\\">
+  <div data-v-f5ca514c=\\"\\" class=\\"product-box__title-description\\"><span data-v-f5ca514c=\\"\\" class=\\"title\\">Title</span><span data-v-f5ca514c=\\"\\" class=\\"description\\">Description</span></div><span data-v-f5ca514c=\\"\\">4.2</span><span data-v-f5ca514c=\\"\\">200$</span>
 </div>"
 `;

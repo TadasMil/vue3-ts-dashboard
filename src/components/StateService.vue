@@ -4,17 +4,17 @@ import StateCardLoading from '@/components/StateCardLoading.vue'
 
 import { IQueryState } from '@/types/query'
 
-const { stateIs } = defineProps<{
-  stateIs: (active: IQueryState) => boolean
+const { state } = defineProps<{
+  state: IQueryState
 }>()
 </script>
 
 <template>
-  <slot name="loading" v-if="stateIs('LOADING')">
+  <slot name="loading" v-if="state === 'LOADING'">
     <StateCardLoading />
   </slot>
 
-  <slot name="error" v-else-if="stateIs('ERROR')">
+  <slot name="error" v-else-if="state === 'ERROR'">
     <StateCardError
       title="500"
       subtitle="Internal Server Error"
@@ -22,22 +22,22 @@ const { stateIs } = defineProps<{
     />
   </slot>
 
-  <slot name="not_authorized" v-else-if="stateIs('NOT_AUTHORIZED')">
+  <slot name="not_authorized" v-else-if="state === 'NOT_AUTHORIZED'">
     <StateCardError title="403" subtitle="You are not authorized to access this information." />
   </slot>
 
-  <slot name="not_found" v-else-if="stateIs('NOT_FOUND')">
+  <slot name="not_found" v-else-if="state === 'NOT_FOUND'">
     <StateCardError title="404" subtitle="The following data could not be found." />
   </slot>
 
-  <slot name="no_results" v-else-if="stateIs('NO_RESULTS')">
+  <slot name="no_results" v-else-if="state === 'NO_RESULTS'">
     <StateCardError
       subtitle="Sorry, no results found."
       message="Please amend the search criteria or filter field to see all items."
     />
   </slot>
 
-  <slot v-else-if="stateIs('IDLE')" />
+  <slot v-else-if="state === 'IDLE'" />
 
   <p v-else class="bg-red-5 text-9xl text-white">State is not a valid state.</p>
 </template>

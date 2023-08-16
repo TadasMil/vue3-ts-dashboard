@@ -40,7 +40,7 @@ const setSidebarVisible = () => {
 
 @media (max-width: 390px) {
   .layout-authenticated {
-    gap: 20px 0;
+    gap: 0;
     margin-left: 0;
   }
 }

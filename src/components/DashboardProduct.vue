@@ -5,13 +5,17 @@ const { title, description, rating, price } = defineProps<{
   rating: number
   price: number
 }>()
+
+defineOptions({
+  inheritAttrs: false
+})
 </script>
 
 <template>
-  <div class="product-box">
+  <div class="product-box gray-box">
     <div class="product-box__title-description">
-      <span>{{ title }}</span>
-      <span>{{ description }}</span>
+      <span class="title">{{ title }}</span>
+      <span class="description">{{ description }}</span>
     </div>
 
     <span>{{ rating }}</span>
@@ -21,15 +25,11 @@ const { title, description, rating, price } = defineProps<{
 
 <style scoped>
 .product-box {
-  border-radius: 6px;
-  border: 0.5px solid #e0e0e0;
-  background: var(--background-color, #fafafa);
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  padding: 12px 16px;
   gap: 16px;
-  background-color: var(--color-off-white);
+  display: grid;
+  border-radius: 6px;
+  align-items: center;
+  grid-template-columns: 1fr auto auto;
   justify-content: space-between;
 }
 
@@ -38,5 +38,14 @@ const { title, description, rating, price } = defineProps<{
   gap: 5px 0;
   flex-direction: column;
   flex: 1;
+}
+
+.title {
+  color: var(--secondary-title-color);
+}
+
+.description {
+  font-size: 12px;
+  color: var(--color-secondary);
 }
 </style>

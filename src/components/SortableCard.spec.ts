@@ -18,11 +18,14 @@ describe('SortableCard.vue', () => {
   })
 
   it('should emit refresh event', async () => {
-    const { getByTestId, emitted } = render(SortableCard, {
+    const cb = vi.fn()
+
+    const { getByTestId } = render(SortableCard, {
       props: {
         title: 'My Card',
         modelValue: null,
-        sortOptions: []
+        sortOptions: [],
+        onRefresh: cb
       }
     })
 
@@ -30,6 +33,6 @@ describe('SortableCard.vue', () => {
 
     await fireEvent.click(refreshButton)
 
-    expect(emitted()).toHaveProperty('refresh')
+    expect(cb).toHaveBeenCalled()
   })
 })

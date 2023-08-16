@@ -1,9 +1,7 @@
 import { render } from '@testing-library/vue'
 import { describe, expect, it } from 'vitest'
 
-import { STATES } from '@/constants/query'
-
-import { IQueryState } from '@/types/query'
+import { STATES } from '@/constants/state'
 
 import '@testing-library/jest-dom'
 import StateService from './StateService.vue'
@@ -20,7 +18,7 @@ describe('StateService.vue', () => {
   testCases.forEach(({ state }) => {
     it(`renders ${state} component`, async () => {
       const { html } = render(StateService, {
-        props: { stateIs: (s: IQueryState) => s === state }
+        props: { state }
       })
 
       expect(html()).toMatchSnapshot()
@@ -30,7 +28,7 @@ describe('StateService.vue', () => {
   testCases.forEach(({ state, slot }) => {
     it(`renders ${slot} slot when state is ${state}`, async () => {
       const { queryByTestId } = render(StateService, {
-        props: { stateIs: (s: IQueryState) => s === state },
+        props: { state },
         slots: { [slot]: `<div data-testid="${slot}-slot"></div>` }
       })
 
@@ -40,7 +38,7 @@ describe('StateService.vue', () => {
 
   it('renders error message for an invalid state', async () => {
     const { getByText } = render(StateService, {
-      props: { stateIs: (state: IQueryState) => state === ('INVALID_STATE' as any) }
+      props: { state: 'STATE' }
     })
 
     expect(getByText('State is not a valid state.')).toBeInTheDocument()
