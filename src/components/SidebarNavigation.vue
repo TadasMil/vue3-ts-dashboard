@@ -71,8 +71,8 @@ const otherLinks: ISidebarMenu = {
 </script>
 
 <template>
-  <nav class="sidebar" :class="{ 'sidebar-visible': sidebarVisible }">
-    <div v-if="sidebarVisible" class="close-btn-wrapper">
+  <nav class="sidebar" :class="{ 'sidebar--visible': sidebarVisible }">
+    <div v-if="sidebarVisible" class="sidebar__close-btn-wrapper">
       <BaseButton
         color="highlight"
         density="none"
@@ -82,7 +82,7 @@ const otherLinks: ISidebarMenu = {
       />
     </div>
 
-    <h1 class="sidebar-title">WeHR</h1>
+    <h1 class="sidebar__title">WeHR</h1>
 
     <SidebarNavigationLinks v-bind="mainLinks" :sidebarVisible="sidebarVisible" />
     <SidebarNavigationLinks v-bind="otherLinks" :sidebarVisible="sidebarVisible" />
@@ -110,12 +110,12 @@ const otherLinks: ISidebarMenu = {
     transform 0.3s ease;
 }
 
-.sidebar-title {
+.sidebar__title {
   font-size: 36px;
   font-weight: 600;
 }
 
-.close-btn-wrapper {
+.sidebar__close-btn-wrapper {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -128,12 +128,12 @@ const otherLinks: ISidebarMenu = {
     gap: 25px 0;
   }
 
-  .sidebar.sidebar-visible {
+  .sidebar--visible {
     transform: translateX(0);
     width: 250px;
   }
 
-  .sidebar-title {
+  .sidebar__title {
     font-size: 20px;
   }
 }
@@ -143,7 +143,7 @@ const otherLinks: ISidebarMenu = {
     transform: translateX(-250px);
   }
 
-  .sidebar.sidebar-visible {
+  .sidebar--visible {
     transform: translateX(0);
   }
 }

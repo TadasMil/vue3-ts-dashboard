@@ -42,21 +42,17 @@ const employeeSummary = [
 
       <template #content>
         <p>{{ card.count }}</p>
-        <img
-          :src="`/images/${card.image}.png`"
-          :alt="card.image"
-          class="employee-summary__card-image"
-        />
+        <img :src="`/images/${card.image}.png`" :alt="card.image" class="employee-summary__image" />
       </template>
 
       <template #footer>
         <div class="employee-summary__footer">
           <div class="employee-summary__footer-genders">
-            <p class="employee-summary__footer-gender">{{ card.men }} Men</p>
-            <p class="employee-summary__footer-gender">{{ card.women }} Women</p>
+            <p class="employee-summary__gender">{{ card.men }} Men</p>
+            <p class="employee-summary__gender">{{ card.women }} Women</p>
           </div>
 
-          <p class="employee-summary__footer-percentage">+{{ card.pastMonth }}% Past month</p>
+          <p class="employee-summary__percentage">+{{ card.pastMonth }}% Past month</p>
         </div>
       </template>
     </BaseCard>
@@ -80,7 +76,7 @@ const employeeSummary = [
   color: var(--color-tertiary);
 }
 
-.employee-summary__card-image {
+.employee-summary__image {
   margin-top: -20px;
 }
 
@@ -97,11 +93,11 @@ const employeeSummary = [
   gap: 4px 0;
 }
 
-.employee-summary__footer-gender {
+.employee-summary__gender {
   line-height: 18px;
 }
 
-.employee-summary__footer-percentage {
+.employee-summary__percentage {
   background-color: #ffefe7;
   padding: 5px 10px;
   display: flex;

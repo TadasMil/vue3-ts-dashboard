@@ -5,20 +5,20 @@ import BaseButton from '@/components/base/BaseButton.vue'
 </script>
 
 <template>
-  <div class="toolbar-bell-container">
+  <div class="toolbar-bell">
     <BaseButton :icon="RoundNotifications" :size="24" density="none" color="highlight" />
 
-    <div class="toolbar-notification-dot"></div>
+    <div class="toolbar-bell__notification-dot"></div>
   </div>
 </template>
 
 <style scoped>
-.toolbar-bell-container {
+.toolbar-bell {
   position: relative;
   display: inline-block;
 }
 
-.toolbar-notification-dot {
+.toolbar-bell__notification-dot {
   position: absolute;
   top: 0;
   right: 0;

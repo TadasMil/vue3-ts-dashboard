@@ -12,7 +12,10 @@ const setSidebarVisible = () => {
 </script>
 
 <template>
-  <div class="base-layout" :class="{ 'sidebar-active': sidebarVisible }">
+  <div
+    class="layout-authenticated"
+    :class="{ 'layout-authenticated--sidebar-active': sidebarVisible }"
+  >
     <SidebarNavigation :sidebarVisible="sidebarVisible" @setSidebarVisible="setSidebarVisible" />
     <Toolbar @setSidebarVisible="setSidebarVisible" />
 
@@ -21,7 +24,7 @@ const setSidebarVisible = () => {
 </template>
 
 <style scoped>
-.base-layout {
+.layout-authenticated {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
@@ -30,13 +33,13 @@ const setSidebarVisible = () => {
 }
 
 @media (max-width: 834px) {
-  .base-layout {
+  .layout-authenticated {
     margin-left: calc(var(--sidebar-mobile-size));
   }
 }
 
 @media (max-width: 390px) {
-  .base-layout {
+  .layout-authenticated {
     gap: 20px 0;
     margin-left: 0;
   }

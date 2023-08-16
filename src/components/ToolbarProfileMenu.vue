@@ -4,11 +4,15 @@ import ArrowDown from 'virtual:icons/mdi/chevron-down'
 
 <template>
   <div class="toolbar-profile-menu">
-    <img src="https://via.placeholder.com/24" alt="Profile Avatar" class="toolbar-profile-avatar" />
+    <img
+      src="https://via.placeholder.com/24"
+      alt="Profile Avatar"
+      class="toolbar-profile-menu__avatar"
+    />
 
-    <div class="toolbar-profile-dropdown">
-      <span class="toolbar-profile-name">Amirra John</span>
-      <ArrowDown class="toolbar-arrow" />
+    <div class="toolbar-profile-menu__dropdown">
+      <span class="toolbar-profile-menu__name">Amirra John</span>
+      <ArrowDown class="toolbar-profile-menu__arrow" />
     </div>
   </div>
 </template>
@@ -20,24 +24,24 @@ import ArrowDown from 'virtual:icons/mdi/chevron-down'
   gap: 12px;
 }
 
-.toolbar-profile-dropdown {
+.toolbar-profile-menu__dropdown {
   display: flex;
   align-items: center;
 }
 
-.toolbar-profile-avatar {
+.toolbar-profile-menu__avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
 }
 
-.toolbar-profile-name {
+.toolbar-profile-menu__name {
   font-size: 16px;
   color: #161e54;
   text-align: center;
 }
 
-.toolbar-arrow {
+.toolbar-profile-menu__arrow {
   font-size: 24px;
   color: var(--color-highlight);
 }
@@ -47,7 +51,7 @@ import ArrowDown from 'virtual:icons/mdi/chevron-down'
     gap: 4px;
   }
 
-  .toolbar-profile-name {
+  .toolbar-profile-menu__name {
     display: none;
   }
 }

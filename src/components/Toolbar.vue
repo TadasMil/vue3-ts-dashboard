@@ -13,9 +13,9 @@ const emit = defineEmits<{ setSidebarVisible: [] }>()
 
 <template>
   <div class="toolbar">
-    <div class="toolbar-left">
+    <div class="toolbar__left">
       <BaseButton
-        class="toolbar-hamburger-menu"
+        class="toolbar__hamburger-menu"
         density="none"
         color="highlight"
         :icon="HamburgerMenu"
@@ -25,7 +25,7 @@ const emit = defineEmits<{ setSidebarVisible: [] }>()
       <ToolbarSearch />
     </div>
 
-    <div class="toolbar-actions">
+    <div class="toolbar__actions">
       <ToolbarBell />
       <BaseButton :icon="LeftDotsMessage" :size="24" density="none" color="highlight" />
       <ToolbarProfileMenu />
@@ -44,20 +44,20 @@ const emit = defineEmits<{ setSidebarVisible: [] }>()
   gap: 0 24px;
 }
 
-.toolbar-left {
+.toolbar__left {
   display: flex;
   flex-grow: 1;
   align-items: center;
   gap: 0 12px;
 }
 
-.toolbar-actions {
+.toolbar__actions {
   display: flex;
   align-items: center;
   gap: 0 30px;
 }
 
-.toolbar-hamburger-menu {
+.toolbar__hamburger-menu {
   display: none;
 }
 
@@ -66,11 +66,11 @@ const emit = defineEmits<{ setSidebarVisible: [] }>()
     padding: 12px 20px 12px 12px;
   }
 
-  .toolbar-hamburger-menu {
+  .toolbar__hamburger-menu {
     display: block;
   }
 
-  .toolbar-actions {
+  .toolbar__actions {
     gap: 0 20px;
   }
 }

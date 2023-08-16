@@ -5,14 +5,20 @@ import Search from '~icons/custom/search'
 </script>
 
 <template>
-  <div class="toolbar-search-container">
-    <input class="search-input" placeholder="Search" />
-    <BaseButton class="search-icon" density="none" color="highlight" :icon="Search" :size="24" />
+  <div class="toolbar-search">
+    <input class="toolbar-search__input" placeholder="Search" />
+    <BaseButton
+      class="toolbar-search__icon"
+      density="none"
+      color="highlight"
+      :icon="Search"
+      :size="24"
+    />
   </div>
 </template>
 
 <style scoped>
-.toolbar-search-container {
+.toolbar-search {
   display: flex;
   width: 30%;
   max-width: 343px;
@@ -26,50 +32,39 @@ import Search from '~icons/custom/search'
   background: var(--color-off-white);
 }
 
-.search-input {
+.toolbar-search__input {
   border: none;
   background: transparent;
   outline: none;
   padding-right: 10px;
   width: 50%;
-}
-
-.search-input::placeholder {
   color: var(--color-quaternary);
-  opacity: 1;
-}
-
-.search-input:-ms-input-placeholder {
-  color: var(--color-quaternary);
-}
-
-.search-input::-ms-input-placeholder {
-  color: var(--color-quaternary);
-}
-
-.search-input:focus::placeholder {
-  color: transparent;
-}
-
-.search-input::placeholder {
   font-size: 16px;
 }
 
-.search-icon {
+.toolbar-search__input::placeholder {
+  opacity: 1;
+}
+
+.toolbar-search__input:focus::placeholder {
+  color: transparent;
+}
+
+.toolbar-search__icon {
   color: #b2b2b2;
   width: 24px;
   height: 24px;
 }
 
 @media (max-width: 834px) {
-  .toolbar-search-container {
+  .toolbar-search {
     max-width: 245px;
     height: 36px;
   }
 }
 
 @media (max-width: 450px) {
-  .toolbar-search-container {
+  .toolbar-search {
     justify-content: center;
     padding: 0px;
     border: none;
@@ -77,7 +72,7 @@ import Search from '~icons/custom/search'
     background: transparent;
   }
 
-  .search-input {
+  .toolbar-search__input {
     display: none;
   }
 }
