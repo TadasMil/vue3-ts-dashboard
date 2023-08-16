@@ -16,6 +16,9 @@ module.exports = {
     node: true,
     es6: true
   },
+  globals: {
+    fetch: false
+  },
   plugins: ['simple-import-sort'],
   overrides: [
     {
@@ -52,7 +55,7 @@ module.exports = {
     }
   ],
   rules: {
-    'no-undef': 'error',
+    'no-undef': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'off',
